@@ -24,8 +24,8 @@ client.on('connected', (adress, port) => {
 })
 
 client.on('chat', (channel, user, message, self,) => {
-    if(message === '!help' || message === '!Help' || message === '!hilfe' || message === '!Hilfe' ) {
-        client.action('freitags_gaming', 'Hi')
+    if(message === '!socials' || message === '!Socials' ) {
+        client.action('freitags_gaming', 'Folge Benston auch auf: https://twitter.com/Benston_ • https://youtube.com/Benston • https://instagram.com/benstontv • https://www.tiktok.com/@benston_ • https://discord.gg/x9Jn9CA benstonHYPE ❖')
     }
 })
 

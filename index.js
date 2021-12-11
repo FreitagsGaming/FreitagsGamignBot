@@ -35,13 +35,13 @@ client.on('subscription', (channel, username, method, message, userstate) => {
 })
 
 client.on('resub', (channel, username, method, _months, message, userstate) => {
-    console.log('resub', {channel, username, method, _months, message, userstate})
-    let streakmonths = userstate['msg-parm-streak-months'];
-    let cumulativeMonths = userstate['msg-parm-cumulivative-months']
-    let sharedStreak = userstate['msg-parm-should-share-streak']
+    console.log('resub', { channel, username, _months, message, userstate, methods })
+    let streakmonths = userstate['msg-param-streak-months'];
+    let cumulativeMonths = userstate['msg-param-cumulative-months']
+    let sharedStreak = userstate['msg-param-should-share-streak']
     if(sharedStreak) {
-        client.say('freitags_Gaming', `Danke, dass du auch im ${streakmonths} Monat noch treu bist! ${@username}`)
+        client.say('freitags_Gaming', `Danke, dass du auch im ${streakmonths} Monat noch treu bist! @${username}`)
     } else {
-        client.say('freitags_gaming', `Danke das du mich schon seit insgesamt ${cumulativeMonths} Subscriber bist ${username} .`)
+        client.say('freitags_gaming', `Danke dass du resubst, warst jetzt insgesamt ${cumulativeMonths} Monate Sub :D @${username}`)
     }
 })
